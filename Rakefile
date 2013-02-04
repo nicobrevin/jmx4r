@@ -6,7 +6,7 @@ require "rubygems"
 
 dir     = File.dirname(__FILE__)
 lib     = File.join(dir, "lib", "jmx4r.rb")
-version = "0.1.4"
+version = "0.2.0"
 
 task :default => [:test]
 
@@ -32,10 +32,10 @@ task :publish_docs => [:rdoc] do
 end
 
 spec = Gem::Specification.new do |spec|
-  spec.name     = "jmx4r"
+  spec.name     = "jmx4r-msp"
   spec.version  = version 
   spec.platform = Gem::Platform::RUBY
-  spec.summary  = "jmx4r is a JMX library for JRuby"
+  spec.summary  = "jmx4r is a JMX library for JRuby - msp branch"
   spec.files    = Dir.glob("{examples,lib,test}/**/*.rb") + ["Rakefile"]
 
   spec.test_files       =  "test/ts_all.rb"
@@ -49,7 +49,7 @@ spec = Gem::Specification.new do |spec|
   spec.author            = "Jeff Mesnil"
   spec.email             = "jmesnil@gmail.com"
   spec.rubyforge_project = "jmx4r"
-  spec.homepage          = "http://github.com/jmesnil/jmx4r"
+  spec.homepage          = "http://github.com/nicobrevin/jmx4r"
   spec.description       = <<END_DESC
 jmx4r is a JMX library for JRuby
 END_DESC
